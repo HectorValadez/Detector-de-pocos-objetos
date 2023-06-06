@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de pocos objetos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Saira+Condensed:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Detector de pocos objetos</h1>
+    <div class="col-lg-4 col-md-4">
+
+        <span> Esto es un reconocimiento de objetos simples:
+            <hr>
+            cuaderno
+            <hr>
+            leche
+            <hr>
+            BB8
+            <hr>
+            billete de $50 MX
+            <hr>
+            billete de $20 MX
+            <hr>
+            pluma negra
+            <hr>
+            estuchera
+            <hr>
+        </span>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div id="camara">
+        </div>
+        <br>
+        <button class="btn-danger" onclick="capturar()">toca para que se duplique lo que ves</button>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div id="captura"></div>
+        <br>
+        <button class="btn-primary">¿si sera que lo identifique?</button>
+        <br>
+        <b id="probabilidad">17% que sea uma pluma negra</b>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

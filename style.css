@@ -1,0 +1,18 @@
+#camara,#captura{
+    border:1px solid goldenrod;
+    width : 265px;
+    height: 265px;
+    margin: 0 auto;
+    box-shadow: 6px 7px 14px black; 
+}
+body {
+text-align: center;
+font-family: 'Oswald', sans-serif;
+background: linear-gradient(45deg,rgb(53, 183, 226),rgb(228, 41, 41),rgb(53, 183, 226));
+height: 100vh;
+color:black
+
+}
+span {
+    font-size: 25px !important;
+}
