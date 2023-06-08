@@ -10,6 +10,10 @@ function encontrar() {
 function Tony(error,resultado) {
     if (!error) {
         console.log(resultado);
+        var cofre=resultado[0].label;
+        var lluvia=resultado[0].confidence;
+        lluvia =Math.round(lluvia*100)
+        document.getElementById("probabilidad").innerHTML=lluvia+"% es un o una "+cofre;
     }
 } 
 Webcam.set({
@@ -18,12 +22,12 @@ Webcam.set({
     image_format:"png",
     png_quality:90
 });
-Webcam.on('load', function () {
-    webcam.attach("#camara");
+
+    Webcam.attach("#camara");
     
-})
 function capturar() {
     Webcam.snap(function (ip) {
         document.getElementById("captura").innerHTML='<img src="'+ip+'" id="foto">'
+        document.getElementById("probabilidad").innerHTML="";
     })
 }
